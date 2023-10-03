@@ -10,7 +10,7 @@ resource "aws_lambda_function" "sample" {
   ]
 
   function_name    = "${var.project}-${var.env}-sample"
-  runtime          = "python3.10"
+  runtime          = "python3.11"
   handler          = "main.lambda_handler"
   filename         = data.archive_file.sample.output_path
   source_code_hash = data.archive_file.sample.output_base64sha256
